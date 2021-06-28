@@ -1,24 +1,24 @@
 # SimpleBank
 
-Application features:
--Adding diffrent types of bank account's, 
--Saving Account with adding interest on end of month,
--Billing account with taking charge on end of month,
--Deposit money to account,
--Withdraw money from account,
--Print all customers,
--Print all accounts for chosen user,
--Print all account for all customers.
-
-
-Language: Polish
-
-Funkcje aplikacji:
--Dodawanie różnego typu kont bankowych,
--Konto oszczędnościowe z doliczaniem odsetek na koniec miesiąca,
--Konto rozliczeniowe z potrąceniem opłaty na koniec miesiąca,
--Wpłacanie środków na konto,
--Wypłata środków z konta,
--Wydruk listy klientów,
--Wydruk listy kont wybranego klienta,
--Wydruk listy wszyskich kont bankowych dla wszystkich klientów.
+Application features:</br>
+-Adding diffrent types of bank account's,</br>
+-Saving Account with adding interest on end of month,</br>
+-Billing account with taking charge on end of month,</br>
+-Deposit money to account,</br>
+-Withdraw money from account,</br>
+-Print all customers,</br>
+-Print all accounts for chosen user,</br>
+-Print all account for all customers.</br>
+</br>
+</br>
+Language: Polish</br>
+</br>
+Funkcje aplikacji:</br>
+-Dodawanie różnego typu kont bankowych,</br>
+-Konto oszczędnościowe z doliczaniem odsetek na koniec miesiąca,</br>
+-Konto rozliczeniowe z potrąceniem opłaty na koniec miesiąca,</br>
+-Wpłacanie środków na konto,</br>
+-Wypłata środków z konta,</br>
+-Wydruk listy klientów,</br>
+-Wydruk listy kont wybranego klienta,</br>
+-Wydruk listy wszyskich kont bankowych dla wszystkich klientów.</br>
