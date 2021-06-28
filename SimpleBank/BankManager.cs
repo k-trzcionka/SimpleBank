@@ -85,9 +85,9 @@ namespace SimpleBank
             Console.WriteLine("Wybór:");
             string choise = Console.ReadLine();
             if (string.IsNullOrEmpty(choise))
-                {
+            {
                 return -1;
-                }
+            }
             return int.Parse(choise);
         }
 
@@ -99,8 +99,19 @@ namespace SimpleBank
             accountNo = Console.ReadLine();
             Console.Write("Podaj kwotę:");
             value = decimal.Parse(Console.ReadLine());
-            _accountManager.Deposit(accountNo, value);
-            Account account = _accountManager.GetAccount(accountNo);
+
+            try
+            {
+                _accountManager.Deposit(accountNo, value);
+                Account account = _accountManager.GetAccount(accountNo);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Podano błędny numer konta, proszę spróbować ponownie");
+                Console.ReadKey();
+                AddMoney();
+            }
+
 
             Console.ReadKey();
         }
@@ -113,9 +124,19 @@ namespace SimpleBank
             accountNo = Console.ReadLine();
             Console.Write("Proszę podać kwotę:");
             value = decimal.Parse(Console.ReadLine());
-            _accountManager.Withdraw(accountNo,value);
-            Account account = _accountManager.GetAccount(accountNo);
-            Console.ReadKey();
+            try
+            {
+                _accountManager.Withdraw(accountNo, value);
+                Account account = _accountManager.GetAccount(accountNo);
+                Console.ReadKey();
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Podano błędny numer konta, proszę spróbować ponownie");
+                Console.ReadKey();
+                TakeMoney();
+            }
+
         }
         private void ListOfCustomers()
         {
@@ -144,7 +165,8 @@ namespace SimpleBank
             Console.WriteLine("Miesiąc zamknięty");
             Console.ReadKey();
         }
-        public void Run() {
+        public void Run()
+        {
             int choise;
             do
             {
@@ -182,8 +204,8 @@ namespace SimpleBank
                         Console.ReadKey();
                         break;
                 }
-            
+
             } while (choise != 0);
-}
+        }
     }
 }
